@@ -1,6 +1,13 @@
+if(process.env.NODE_ENV != "production"){
+    require("dotenv").config();
+}
+
+
+
+
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = 3000;
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
@@ -65,22 +72,15 @@ app.use((req,res,next) => {
     next();
 });
 
-//Demo User 
 
-// app.get("/demouser" , async (req,res) => {
-//     let fakeUser = new User( {
-//     email: "aabidali@gmail.com",
-//     username : "Aabid",
-//     });
-
-//     let registerUser = await User.register(fakeUser , "Hii");  // pbkdf2 Algorithm is used In This hashing Process 
-//     res.send(registerUser);
-// });
 
 app.use("/listings" , listingRouter);
 app.use("/listings/:id/reviews" , reviewRouter);
 app.use("/" , userRouter);
 
+app.get("/", (req, res) => {
+  res.redirect("/listings/home");
+});
 
 app.all( "*", (req,res,next) => {
     next(new ExpressError(404 , "Page Not Found"));

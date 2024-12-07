@@ -1,6 +1,6 @@
 <% layout("/layouts/boilerplate") %>
 
-    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
         <div class="row">
             <div class="col-8 offset-2">
                 <h3 class="mt-5">Edit Your List </h3>
@@ -17,9 +17,19 @@
                     <div class="invalid-feedback">Their Should Be a Berif Description!!</div>
                 </div>
 
+
+
+                jo niche likha hua h vo edit page par current listing ki chhoti si image dikhane ke liya tha isko baad me karunga kyuki isme sari listings ko dubara banana padega on cloudnary
+
+<!--                 
+                <div class="mb-3 current-image-div" >
+                    Current Listing Image <br>
+                    <img src=" <%= orignalImageUrl %>  ">
+                </div> -->
+
                 <div class="mb-3">
-                    <label for="image.url" class="form-label"> <b> Image URL :  </b> </label> 
-                    <input name="listing[image.url]" type="text" value=" <%= listing.image.url %> " class="form-control" required>      
+                    <label for="image" class="form-label"> <b> Upload New Image</b> </label> 
+                    <input name="listing[image]" type="file"  class="form-control" >      
                     <div class="invalid-feedback">Image URL IS Must!!</div>
                 </div>
     

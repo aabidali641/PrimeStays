@@ -1,34 +1,93 @@
 <% layout("/layouts/boilerplate") %>
 
 <body>
-    <h1>All Listings</h1>
-    <!-- <form method="GET" action="/listings/new">
+  <h1>All Listings</h1>
+  <!-- <form method="GET" action="/listings/new">
         <button>
             Create New List
         </button>
     </form> -->
 
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
-
-        <% for( let listing of allListings){ %>
-            <a href="/listings/ <%= listing._id %> " class="listing-link">
-                <div class="card col "  >
-                    <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 20rem;" >
-                    <div class="card-img-overlay"></div>
-                    <div class="card-body">
-                      <p class="card-text">
-                        <b> <%= listing.title %> </b>
-                        <br>
-                        &#8377; <%= listing.price.toLocaleString("en-IN") %>
-                      </p>
-                    </div>
-                  </div>
-            </a>
-        <% } %>
-
-    </div>
-    
-
-
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+    <% for( let listing of allListings){ %>
+    <a href="/listings/ <%= listing._id %> " class="listing-link">
+      <div class="card col">
+        <img
+          src="<%= listing.image.url %>"
+          class="card-img-top"
+          alt="listing_image"
+          style="height: 20rem"
+        />
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b> <%= listing.title %> </b>
+            <br />
+            &#8377; <%= listing.price.toLocaleString("en-IN") %>
+          </p>
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
 </body>
 
+<div class="container mt-5">
+  <div class="row mx-0 d-flex justify-content-evenly">
+    <div class="card hover-effect card-home" style="width: 18rem">
+      <img
+        src="https://img.freepik.com/premium-photo/home-interior-designs_1197721-15886.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title mt-2">Welcome to PrimeStay</h5>
+        <p class="card-text">
+          Find your perfect stay with ease, Explore luxury and comfort.
+        </p>
+        <a href="/listings/home" class="btn add-btn mb-2">Home</a>
+      </div>
+    </div>
+
+    <div class="card hover-effect card-home" style="width: 18rem">
+      <img
+        src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/d7826c6a-6070-4016-acb1-03af25b929cb/7326ce7b-73b8-4819-aee1-0a8f78536f91.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title mt-2">Get In Touch</h5>
+        <p class="card-text">
+          Need assistance? Reach out to us for queries, or feedback.
+        </p>
+        <a href="/listings/contact" class="btn add-btn mb-2">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="card hover-effect card-home" style="width: 18rem">
+      <img
+        src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/d7826c6a-6070-4016-acb1-03af25b929cb/7301f99c-3c92-4b1a-bba5-9c5f07501400.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title mt-2">Explore All Listings</h5>
+        <p class="card-text">Browse a wide variety of premium hotels.</p>
+        <a href="/listings" class="btn add-btn mb-2">Explore</a>
+      </div>
+    </div>
+
+    <div class="card hover-effect card-home" style="width: 18rem">
+      <img
+        src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/e5af4dd1-0a24-4cee-bee3-8755dfed8dec/4fbeea20-9253-49cc-9685-ee1ef93e566c.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title mt-2">Know Us Better</h5>
+        <p class="card-text">Discover the story behind PrimeStay</p>
+        <a href="/listings/about" class="btn add-btn mb-2">About Us</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,11 @@
 const Listing = require("./models/listing.js");
 
-module.exports.isLoggedIn = (req,res,next) => {
+module.exports.isLoggedIn =  (req,res,next) => {
     if(!req.isAuthenticated()){
         req.flash("error" , "You Must Be Logged In To Create Listing");
-        res.redirect("/login");
+        return res.redirect("/login");
     }
-    return next();
+    next();
 };
 
 module.exports.isOwner = async(req,res,next) => {

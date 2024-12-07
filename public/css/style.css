@@ -1,137 +1,257 @@
-
-
-body{
-    font-family: 'Plus Jakarta Sans' , sans-serif !important;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.container{
-    flex: 1;
+.container {
+  flex: 1;
 }
-.navbar{
-    height: 5rem;
-    background-color: #ebebeb !important;
+.navbar {
+  height: 5rem;
+  background-color: #ebebeb !important;
 }
-.logo img{
-    max-width: 10rem; 
-    background-size: cover;
-    
-}
-
-
-.fa-compass{
-    color: #fe424d;
-    font-size: 2.3rem;
+.logo img {
+  max-width: 10rem;
+  background-size: cover;
 }
 
-.nav-link{
-    color: #222222 !important;
-    margin-left: 1rem !important;
+.fa-compass {
+  color: #fe424d;
+  font-size: 2.3rem;
 }
 
-.container-fluid{
-    font-weight: 900;
-    font-size: larger;
-}
-.nav-link:hover{
-    color: white !important;
-    
-    transition: all 0.7s !important;
-    border-radius: 10rem !important;
-    background-color: black !important;
+.nav-link {
+  color: #222222 !important;
+  margin-left: 1rem !important;
 }
 
 
+.navbar-collapse {
+  background-color: #ebebeb; /* Semi-transparent black */
+  margin-top: 0.4rem;
+  
+}
+
+.container-fluid {
+  font-weight: 900;
+  font-size: larger;
+}
+.nav-link:hover {
+  color: rgb(139, 133, 133) !important;
+  transition: all 0.3s;
+  text-decoration: underline;
+}
 
 /* Footer */
 
-.f-info-links a{
-    text-decoration: none;
-    color: #222222;
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
 }
 
-.f-info-links:hover{
-    text-decoration: underline;
+.f-info-links:hover {
+  text-decoration: underline;
 }
 
 .f-info-links,
-.f-info-socials{
-    width: 100%;
-    text-align: center;
+.f-info-socials {
+  width: 100%;
+  text-align: center;
 }
 
 .f-info-socials i {
-    margin-right: 0.7rem;
-    font-size: 1.6rem;
+  margin-right: 0.7rem;
+  font-size: 1.6rem;
 }
 
-.f-info{
-    height: 8rem;
-    background-color: #ebebeb;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center; 
+.f-info {
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 /* CARDS */
 
-.card{
-    border: none !important;
-    margin-bottom: 2rem;
-   
+.card {
+  border: none !important;
+  margin-bottom: 2rem;
 }
 
-.card-img-top{
-    border-radius: 1.2rem !important;
-    object-fit: cover !important;
-    width: 100% !important;
+.card-img-top {
+  border-radius: 1.2rem !important;
+  object-fit: cover !important;
+  width: 100% !important;
 }
 
-.card-body{
-    padding: 0 !important;
+.card-body {
+  padding: 0 !important;
 }
 
-.listing-link{
-    text-decoration: none;
-}.Location-Title{
-    font-weight: 900;
+.listing-link {
+  text-decoration: none;
+}
+.Location-Title {
+  font-weight: 900;
 }
 
 /* CARDS EFFECTS */
 
-.card-img-overlay{
-    opacity: 0;
+.card-img-overlay {
+  opacity: 0;
 }
-.card-img-overlay:hover{
-    opacity: 0.2;
-    background-color: white;
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
 }
 
-.add-btn{
-    background: #fe424d !important ;
-    border: none !important;
+.add-btn {
+  background: #fe424d !important ;
+  border: none !important;
+}
+
+.add-btn2{
+  background: #FFD700 !important;
+  font-weight: 800 !important;
+}
+.add-btn2:hover{
+  background: #fff !important;
+  color: #222222 !important;
+  font-weight: 800 !important;
 }
 
 /* SHOW PAGE */
-.show-img{
-    height: 23rem;
-    max-width: 23rem;
+.show-img {
+  height: 23rem;
+  max-width: 23rem;
 }
 
-.add-btn:hover{
-    background-color: black !important;
-    color: #fe424d !important;
-    border-radius: 4rem;
-    transition: 0.6s !important;
-}
-.reviews-card{
-    border: 1px solid gray !important;
+.add-btn:hover {
+  background-color: black !important;
+  color: #fe424d !important;
+  border-radius: 4rem;
+  transition: 0.6s !important;
+  font-weight: 900;
 }
 
-.flash{
-    font-size: larger;
-    font-weight: 900;
+.reviews-card {
+  border: 1px solid gray !important;
 }
+
+.flash {
+  font-size: larger;
+  font-weight: 900;
+}
+
+.hero-image img{
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  display: block;
+}
+
+.hero-image{
+  margin-right: -6.9rem;
+  margin-left: -7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+/* Basic card styling */
+.card-home {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default light shadow */
+    background-color: #fff; /* Clean white background */
+   
+}
+
+
+
+/* Hover effect with shadow */
+.card-home:hover {
+    transform: translateY(-5px); /* Slight upward lift */
+    box-shadow:  8px 8px 16px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+}
+
+/* Image hover effect */
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card-home:hover .card-img-top {
+    transform: scale(1.05); /* Slight enlargement of image */
+}
+
+
+
+.card-title .card-text{
+  text-decoration: none !important;
+}
+
+
+
+.overlay-content {
+    position: absolute; /* Position relative to the parent (hero-image) */
+    top: 35%; /* Center vertically */
+    left: 30%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Align center precisely */
+    color: #fff; /* Text color */
+    background: rgba(0, 0, 0, 0.3); /* Optional: Add semi-transparent background */
+    padding: 20px; /* Add some padding */
+    border-radius: 10px; /* Rounded corners for style */
+    z-index: 2; /* Ensures content is above the image */
+}
+
+
+
+.form1{
+  background-color: #FFF8E1;
+  padding: 1.2rem;
+}
+
+.outer-div{
+  display: block;
+  padding: 1rem;
+  
+}
+
+.super-inner-div{
+  
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+
+}
+
+.inner-div{
+ 
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.inner-div-content{
+  font-size: 1.5rem ;
+  font-weight: 600;
+  display: flex;
+  justify-content: left !important;
+  align-items: center;
+}
+
+.inner-div-icon{
+  display: flex;
+  justify-content: right !important;
+}
+
+

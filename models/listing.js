@@ -19,6 +19,10 @@ const listingSchema = new Schema({
             type: String,
             required:true,
         },
+        filename: {
+            type:String,
+            required:true,
+        }
     },
     price: {
         type: Number,
@@ -35,15 +39,16 @@ const listingSchema = new Schema({
     reviews: [ {
         type:Schema.Types.ObjectId,
         ref: "Review",
-    },
-],
+        default: [],
+    }
+    ],
     owner: {
     type:Schema.Types.ObjectId,
-    ref:"User",
-},
+    ref: "User",
+    }
 });
 
-listingSchema.post("findOneAndDelete" , async(listing) => {
+listingSchema.post("findOneAndDelete" , async (listing) => {
     if(listing){
         await Review.deleteMany({_id: { $in: listing.reviews}}) ;
     }
