@@ -1,59 +1,14 @@
-This project is a web application inspired by Airbnb. It allows users to search, book, and list accommodations such as hotels or individual rooms for rent. The platform is built with modern web development technologies to ensure scalability, responsiveness, and user-friendliness.
+PrimeStays is an end-to-end fully hosted and deployed web application on Render, designed to simplify the process of listing, booking, and reviewing accommodations.
 
-Features:- 
+💻 Tech Stack Used:
+PrimeStays leverages a powerful tech stack to deliver a seamless experience. The frontend is built using EJS templating with Bootstrap, ensuring a responsive and interactive UI. On the backend, Node.js and Express.js provide a scalable and efficient architecture, while MongoDB stores data securely. Authentication is implemented using Passport.js, supporting user login, logout, and signup. For image management, the project integrates Cloudinary, allowing smooth and optimized media storage. The entire project follows the MVC (Model-View-Controller) architecture to enhance maintainability and scalability.
 
-1.User Authentication:
-
-  Secure authentication using Passport.js.
-
-  Sign up, login, and logout functionality.
-
-  Password encryption for user security.
-
-2. Accommodation Listings:
-
-  Users can browse available accommodations.
-
-  Hosts can add, edit, or delete listings.
-
-  Reviews can be added for each listing by users.
-
-  Only authorized users can edit listing details.
-
-3. Search Functionality:
-
-  Search by location, price, or availability.
-
-  Filter options for amenities and preferences.
-
-4.Responsive Design:
-
-  Mobile-friendly interface.
-
-  Seamless experience across devices.
-
-5.Interactive UI:
-
-  Bootstrap-powered design for modern aesthetics.
-
-  Dynamic content rendering with EJS templates.
-
-6.Database Management:
-
-  MongoDB for storing user, booking, and listing data.
-
-  Tech Stack
-
-7.Frontend:
-
-  CSS, Bootstrap for responsive design.
-
-  EJS (Embedded JavaScript) for templating.
-
-8. Backend:
-
-  Node.js and Express.js for server-side logic.
-
-9.Database:
-
- MongoDB for data persistence.
+🔑 Key Features:
+✅ Seamless accommodation listings and booking functionality
+✅ Secure authentication with login, logout, and signup using Passport.js
+✅ Role-Based Access Control (RBAC) for property management
+✅ Responsive and user-friendly UI with Bootstrap
+✅ Image storage and management powered by Cloudinary
+✅ Fully hosted and deployed on Render for seamless access
+✅ Scalable and efficient backend with Express.js
+✅ Intuitive user dashboard for managing bookings and listings
